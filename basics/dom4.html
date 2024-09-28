@@ -1,0 +1,72 @@
+// Dynamic style, getAttribute, setAttribute, innerText, innerHTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+    <style>
+        .fruits-container li {
+            color : tomato;
+        }
+        #fruits-title {
+            color: mediumseagreen;
+        }
+
+        .important-places {
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <h1>My awesome DOM de baba</h1>
+        <ul>
+            <li>jalali set</li>
+            <li>Shafayet</li>
+            <li>bonobash</li>
+            <li>DOM de re baba</li>
+        </ul>
+    </section>
+    
+    <section class="fruits-container">
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+            <li class="important-places ">Soondarban</li>
+            <li class="important-places">bandorban</li>
+            <li class="important-places">kataban</li>
+            <li>shalbon</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        const ft = document.getElementById('fruits-title')
+        ft.style.backgroundColor = 'lightblue';
+        ft.style.textAlign = 'center';
+
+        ft.getAttribute('id');
+        // console.log(ft);
+
+
+        
+    </script>
+
+</body>
+</html>
