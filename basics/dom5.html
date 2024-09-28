@@ -1,0 +1,94 @@
+// styling dom properties, and remove css class using js 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+    <style>
+        .fruits-container li {
+            color : tomato;
+        }
+        #fruits-title {
+            color: mediumseagreen;
+        }
+
+        .important-places {
+            color: blueviolet;
+        }
+
+        .lg-bg {
+            background-color: lightgreen;
+        }
+
+        .text-cener {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <h1>Welcome to my DOM</h1>
+        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iusto illum incidunt ipsum optio necessitatibus quidem dolorem! Hic magni autem ducimus quos, repellendus excepturi asperiores. Dolorem laudantium inventore modi in recusandae ducimus ea eligendi nemo iure fugiat totam non explicabo enim quibusdam suscipit dolores excepturi magni ipsum mollitia ex, veniam reprehenderit illo! Illo dignissimos commodi perspiciatis aliquam modi nemo molestias!</P>
+    </section>
+
+    <section>
+        <h1>My Awesome DOM de baba</h1>
+        <ul>
+            <li>jalai set</li>
+            <li>shafayet</li>
+            <li>bonobash</li>
+            <li>DOM de re baba</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1>Fruits i like </h1>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+        </ul>
+    </section>
+
+    <section id="places-container">
+        <h1 class="places-title">Places I like to visit</h1>
+        <ul>
+            <li class="important-places">Sundarban</li>
+            <li class="important-places">Bandarban</li>
+            <li class="important-places">kataban</li>
+            <li>shalban</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        
+
+        const sections = document.querySelectorAll('section');
+        for (const section of sections) {
+            section.style.border = '2px solid steelblue';
+            section.style.marginTop = '5px';
+            section.style.borderRadius = '15px';
+
+            section.style.paddingLeft = '7px';
+            section.style.backgroundColor = 'lightgray';
+        }
+
+
+        // const placesContainer = document.getElementById('places-container');
+        // placesContainer.style.backgroundColor = 'lightgreen';
+
+        const placesContainer = document.getElementById('places-container');
+        placesContainer.classList.add('text-center');
+        
+    </script>
+
+</body>
+</html>
