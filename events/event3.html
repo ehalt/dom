@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+<body>
+    <h1 class="cng">DOM er ajke special evetns</h1>
+    <button onclick="changesomething()">make toamto</button>
+    <button onclick="mkyellow()">make yellow</button>
+    <button onclick="makegreen()">make green</button>
+    <button id="make-pink">Make pink</button>
+    <button id="make-blue">Make blue</button>
+    <button id="make-purple">make purple</button>
+
+    <script>
+        function changesomething() {
+            const tg = document.getElementsByClassName('cng');
+            for (const e of tg) {
+                e.style.color = 'tomato';
+            }
+        }
+
+        function mkyellow () {
+            const mkyellow = document.querySelector('h1');
+            mkyellow.style.color = 'yellow';
+        }
+
+        function makegreen() {
+            const mg = document.querySelector('h1');
+            mg.style.color = 'green';
+        }
+        
+
+        const pinkbtn = document.getElementById('make-pink');
+        pinkbtn.addEventListener('click', makepink)
+
+        function makepink() {
+            const mp = document.querySelector('h1');
+            mp.style.color = 'pink';
+        }
+
+
+        // make green 
+        const makebluebtn = document.getElementById('make-blue');
+        makebluebtn.addEventListener('click', function makeBlue() {
+            document.querySelector('h1').style.color = 'blue';
+        });
+
+
+        // make purple 
+
+        document.getElementById('make-purple').addEventListener('click', function() {
+            document.querySelector('h1').style.color = 'purple';
+        })
+    </script>
+</body>
+</html>

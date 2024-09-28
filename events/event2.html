@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+<body>
+    <h1 class="cng">DOM er ajke special evetns</h1>
+    <button onclick="changesomething()">make toamto</button>
+    <button onclick="mkyellow()">make yellow</button>
+    <button onclick="makegreen()">make green</button>
+
+    <script>
+        function changesomething() {
+            const tg = document.getElementsByClassName('cng');
+            for (const e of tg) {
+                e.style.color = 'tomato';
+            }
+        }
+
+        function mkyellow () {
+            const mkyellow = document.querySelector('h1');
+            mkyellow.style.color = 'yellow';
+        }
+
+        function makegreen() {
+            const mg = document.querySelector('h1');
+            mg.style.color = 'green';
+        }
+        
+        
+    </script>
+</body>
+</html>
